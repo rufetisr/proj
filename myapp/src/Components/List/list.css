@@ -6,7 +6,7 @@
     flex-direction: column;
     padding: 30px 20px;
     width: 100%;
-
+    height: min-content;
 }
 
 .list > input{

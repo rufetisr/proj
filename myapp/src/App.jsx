@@ -13,9 +13,6 @@ function App() {
         <Form />
         <List />
       </main>
-      <div>
-       
-      </div>
     </div>
   )
 }
