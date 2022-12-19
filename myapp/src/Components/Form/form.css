@@ -1,0 +1,18 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    /* background-color: blueviolet; */
+    border: 1px solid black;
+    width: 100%;
+}
+
+
+.searchbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.searchbox>input {
+    margin-right: 10px;
+}
