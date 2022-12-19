@@ -5,7 +5,9 @@ const list = () => {
         <div className='list'>
             <input type="text" placeholder='List adini daxil edin'/>
             <ul className='favourite-list'>
-
+                <li>salam</li>
+                <li></li>
+                <li></li>
             </ul>
             <button>Save list</button>
         </div>

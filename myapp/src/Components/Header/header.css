@@ -9,6 +9,7 @@
     padding: 20px 0px 10px 0px;  
     display: flex;  
     flex-wrap: wrap;
+    min-width: 610px;
     /* min-width: 300px; */
 }
 

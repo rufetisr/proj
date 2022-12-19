@@ -6,8 +6,19 @@
     flex-direction: column;
     padding: 30px 20px;
     width: 100%;
+
+}
+
+.list > input{
+    margin-bottom: 24px;
+}
+
+.list > ul{
+    margin-bottom: 24px;
 }
 
 .list > button{
-    align-self: flex-start;    
+    align-self: flex-start;  
+    padding: 10px 15px;
+    width: calc(100%*2/3);
 }
