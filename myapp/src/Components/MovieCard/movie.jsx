@@ -1,10 +1,11 @@
 import React from 'react';
+import { useRef } from 'react';
 import "./movie.css";
 
 const movie = (props) => {
     let { img, title, type, year, id } = props;
     return (
-        <li key={id} className="movie">
+        <li key={id} className="movie" >
             {
                 img == 'N/A' ?
                     <div style={{ backgroundColor: "#d3d3d3", width: "120px", height: "150px", marginRight: "21px",display: "flex", alignItems: "center", justifyContent: "center", flex:"1"}}>
