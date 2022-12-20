@@ -1,11 +1,11 @@
 import React from 'react'
-import { useRef } from 'react';
 import { useState } from 'react'
 import { getMovieData } from '../../Services/db'
 import "../Form/form.css";
 import Movie from "../MovieCard/movie"
-const Form = () => {
-  const ref = useRef();
+
+
+const Form = ({ data1, setData1, title, setTitle, obj, setObj }) => {
   const [data, setData] = useState([]);
 
   let getFilms = async (e) => {
@@ -29,7 +29,7 @@ const Form = () => {
           data?.map(item => {
             return (
               <>
-                <Movie img={item.Poster} title={item.Title} type={item.Type} year={item.Year} id={item.imdbID}  />
+                <Movie obj={obj} setObj = {setObj} img={item.Poster} title={item.Title} type={item.Type} year={item.Year} id={item.imdbID} data={data1} setData={setData1} title1={title} setTitle={setTitle}/>
               </>
             )
           })

@@ -17,7 +17,9 @@
 .list > ul{
     margin-bottom: 24px;
 }
-
+.list > ul > li{
+    /* list-style-type: none; */
+}
 .list > button{
     align-self: flex-start;  
     padding: 10px 15px;
