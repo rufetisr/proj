@@ -11,6 +11,7 @@
 
 .list > input{
     margin-bottom: 24px;
+    padding: 5px 10px;
 }
 
 .list > ul{

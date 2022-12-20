@@ -10,11 +10,11 @@ const movie = (props) => {
                     <div style={{ backgroundColor: "#d3d3d3", width: "120px", height: "150px", marginRight: "21px",display: "flex", alignItems: "center", justifyContent: "center", flex:"1"}}>
                         <span>No poster</span>
                     </div> :
-                    <img src={img} style={{flex:"2"}}/>
+                    <img src={img} />
             }
             <div style={{flex:"1"}}>
                 <h3>{`${title} (${year})`}</h3>
-                <button>Add list</button>
+                <button style={{width: "60%"}}>Add list</button>
             </div>
         </li>
     );

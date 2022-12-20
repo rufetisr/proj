@@ -9,12 +9,15 @@
 .left {
     display: flex;
     flex-direction: column;
+    margin-right: 50px;
 }
 
 .left>ul {
-    margin-top: 35px;
+    margin-top: calc(100%*3/6);
     list-style-type: none;
     padding: 0px;
+    display: flex;
+    flex-direction: column;
 }
 
 .searchbox {
@@ -26,6 +29,8 @@
 .searchbox>input {
     margin-right: 10px;
     margin-top: 5px;
+    width: 250px;
+    padding: 5px;
 }
 
 .searchbox>button {

@@ -1,6 +1,6 @@
 .movie>img {
-    width: 120px;
-    height: 150px;
+    width: 150px;
+    height: 200px;
     object-fit: contain;
     margin-right: 21px;
 }
@@ -10,6 +10,8 @@
     background-color: rgb(242, 210, 64);
     padding: 20px;
     margin-bottom: 21px;
+    margin-right: 20px;
+    width: 400px;
 }
 
 .movie>div {
