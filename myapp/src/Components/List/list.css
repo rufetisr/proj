@@ -17,8 +17,15 @@
 .list > ul{
     margin-bottom: 24px;
 }
-.list > ul > li{
-    /* list-style-type: none; */
+
+.list > ul > div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.list > ul > div > li{
+    margin-right: 10px;
 }
 .list > button{
     align-self: flex-start;  

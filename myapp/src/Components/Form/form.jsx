@@ -5,7 +5,7 @@ import "../Form/form.css";
 import Movie from "../MovieCard/movie"
 
 
-const Form = ({ data1, setData1, title, setTitle, obj, setObj }) => {
+const Form = ({ obj, setObj, id, setId }) => {
   const [data, setData] = useState([]);
 
   let getFilms = async (e) => {
@@ -13,6 +13,7 @@ const Form = ({ data1, setData1, title, setTitle, obj, setObj }) => {
     // console.log(e.target.movie.value);
     let result = await getMovieData(e.target.movie.value);
     setData(result);
+    console.log("result",result);
   }
 
   return (
@@ -24,17 +25,16 @@ const Form = ({ data1, setData1, title, setTitle, obj, setObj }) => {
           <button type='submit'>Search</button>
         </div>
       </form>
-      <ul >
+      <ul>
         {
           data?.map(item => {
             return (
               <>
-                <Movie obj={obj} setObj = {setObj} img={item.Poster} title={item.Title} type={item.Type} year={item.Year} id={item.imdbID} data={data1} setData={setData1} title1={title} setTitle={setTitle}/>
+                <Movie obj = {obj} setObj = {setObj} img={item.Poster} title={item.Title} type={item.Type} year={item.Year} id={item.imdbID}/>
               </>
             )
           })
         }
-
       </ul>
     </div>
   )

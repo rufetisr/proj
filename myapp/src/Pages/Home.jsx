@@ -6,21 +6,21 @@ import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function Home() {
-  const [data, setData] = useState();
-  const [title, setTitle] = useState();
+  // const [data, setData] = useState();
+  // const [title, setTitle] = useState();
   const [obj, setObj] = useState([{
-    // Poster: "",
+    Poster: "",
     Title: "",
     Year: "",
     imdbID: "",
   }]);
-
+  // const [id, setId] = useState([])
   return (
         <div className="container">
           <Header />
           <main className='main'>
-            <Form data1={data} setData1={setData} title={title} setTitle={setTitle} obj={obj} setObj={setObj} />
-            <List data={data} setData={setData} title={title} setTitle={setTitle} obj={obj} setObj={setObj} />
+            <Form  obj={obj} setObj={setObj} />
+            <List obj={obj} setObj={setObj} />
           </main>
         </div>
   )

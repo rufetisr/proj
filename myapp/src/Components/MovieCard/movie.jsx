@@ -1,28 +1,33 @@
 import React from 'react';
 import "./movie.css";
 
+let arr = [];
 const movie = (props) => {
-    let { img, title, type, year, id, title1, setTitle, obj, setObj } = props;
-    let arr = [];
+    let { img, title, type, year, id, obj, setObj} = props;
+    // let arr = [];
     let Click = () => {
 
         // ul-i tap, li-yw title-i add et
-        // setTitle(`${title} (${year})`);
-        // console.log(props.data);
-        // console.log(title1);
+        
+        // arr.push(id1.map(item=>{
+        //     return item
+        // }));
         if (!arr.includes(id, 0)) {
             arr.push(id);
-            setObj([
-                ...obj,
-                {
-                    Title: title,
-                    Year: year,
-                    imdbID: id,
-                }])
+            setObj
+                (
+                    [
+                        ...obj,
+                        {
+                            Poster: img,
+                            Type: type,
+                            Title: title,
+                            Year: year,
+                            imdbID: id,
+                        }]
+                )
         }
-
         console.log(obj);
-        console.log(arr);
         // if (!arr.includes(id, 0)) {
         //     let li = document.createElement("li");
         //     li.innerHTML = `${title} (${year})`;
@@ -33,7 +38,7 @@ const movie = (props) => {
 
     }
     return (
-        <li key={id} className="movie" >
+        <li key={title} className="movie" >
             {
                 img == 'N/A' ?
                     <div style={{ backgroundColor: "#d3d3d3", width: "120px", height: "150px", marginRight: "21px", display: "flex", alignItems: "center", justifyContent: "center", flex: "1" }}>
