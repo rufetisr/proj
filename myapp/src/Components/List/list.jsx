@@ -6,10 +6,11 @@ import { useRef } from 'react';
 
 
 const list = ({ obj, setObj, arr, setArr }) => {
-    let [isActive, setActive] = useState("true");
+    let [isActive, setActive] = useState(true);
     let [value, setValue] = useState();
-
+    let [inputActive, setInputActive] = useState(false);
     let listInput = useRef();
+
     let textChange = (e) => {
         e.target.value != "" ? setActive(false) : setActive(true);
     }
@@ -17,8 +18,10 @@ const list = ({ obj, setObj, arr, setArr }) => {
     let goToList = () => {
         if (listInput.current.value.length != 0) {
             console.log(listInput.current.value);
+            setValue(listInput.current.value);
+            setInputActive(true);
         }
-        setValue(listInput.current.value.length);
+
     }
 
     let Delete = (item) => {
@@ -27,18 +30,18 @@ const list = ({ obj, setObj, arr, setArr }) => {
         obj.splice(index, 1);
         setObj([...obj]);
         arr.splice(index, 1)
-        setArr([...arr])
+        setArr(arr)
         console.log(obj);
         console.log(arr);
     }
 
     return (
         <div className='list'>
-            <input ref={listInput} onChange={textChange} type="text" placeholder='List adini daxil edin' />
+            <input ref={listInput} onChange={textChange} type="text" placeholder='List adini daxil edin' disabled={inputActive} />
             <ul className='favourite-list' >
                 {
                     obj.map((item) => {
-                        return (                            
+                        return (
                             <div style={{ display: "flex" }}>
                                 {
                                     item.Title ? <li key={item.Title}> {item.Title} ({item.Year})</li>
@@ -52,12 +55,10 @@ const list = ({ obj, setObj, arr, setArr }) => {
                             </div>
                         )
                     })
-
                 }
             </ul>
             {
-
-                value > 0 ? <Link to="/List">Go to</Link> : <button onClick={goToList} disabled={isActive}>Save list</button>
+                value  ? <Link to="/List" state={obj} >Go to</Link> : <button onClick={goToList} disabled={isActive}>Save list</button>
             }
         </div>
     )
