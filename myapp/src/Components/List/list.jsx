@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { useRef } from 'react';
 
 
-const list = ({ obj, setObj }) => {
+const list = ({ obj, setObj, arr, setArr }) => {
     let [isActive, setActive] = useState("true");
     let [value, setValue] = useState();
 
@@ -24,8 +24,12 @@ const list = ({ obj, setObj }) => {
     let Delete = (item) => {
         let index = obj.indexOf(item);
         console.log(index);
-        let newArr = obj.splice(index, 1);
-        setObj(newArr);
+        obj.splice(index, 1);
+        setObj([...obj]);
+        arr.splice(index, 1)
+        setArr([...arr])
+        console.log(obj);
+        console.log(arr);
     }
 
     return (
@@ -34,7 +38,7 @@ const list = ({ obj, setObj }) => {
             <ul className='favourite-list' >
                 {
                     obj.map((item) => {
-                        return (
+                        return (                            
                             <div style={{ display: "flex" }}>
                                 {
                                     item.Title ? <li key={item.Title}> {item.Title} ({item.Year})</li>

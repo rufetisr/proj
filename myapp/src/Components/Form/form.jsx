@@ -5,7 +5,7 @@ import "../Form/form.css";
 import Movie from "../MovieCard/movie"
 
 
-const Form = ({ obj, setObj, id, setId }) => {
+const Form = ({ obj, setObj, arr, setArr}) => {
   const [data, setData] = useState([]);
 
   let getFilms = async (e) => {
@@ -30,7 +30,7 @@ const Form = ({ obj, setObj, id, setId }) => {
           data?.map(item => {
             return (
               <>
-                <Movie obj = {obj} setObj = {setObj} img={item.Poster} title={item.Title} type={item.Type} year={item.Year} id={item.imdbID}/>
+                <Movie arr={arr} setArr={setArr} obj = {obj} setObj = {setObj} img={item.Poster} title={item.Title} type={item.Type} year={item.Year} id={item.imdbID} item={item}/>
               </>
             )
           })

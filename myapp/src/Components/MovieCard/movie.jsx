@@ -1,19 +1,19 @@
 import React from 'react';
 import "./movie.css";
 
-let arr = [];
+// let arr = [];
 const movie = (props) => {
-    let { img, title, type, year, id, obj, setObj} = props;
+    let { img, title, type, year, id, obj, setObj, arr, setArr } = props;
     // let arr = [];
     let Click = () => {
 
         // ul-i tap, li-yw title-i add et
-        
+
         // arr.push(id1.map(item=>{
         //     return item
         // }));
         if (!arr.includes(id, 0)) {
-            arr.push(id);
+            setArr([...arr, id]);
             setObj
                 (
                     [
@@ -28,6 +28,7 @@ const movie = (props) => {
                 )
         }
         console.log(obj);
+        console.log(arr);
         // if (!arr.includes(id, 0)) {
         //     let li = document.createElement("li");
         //     li.innerHTML = `${title} (${year})`;
