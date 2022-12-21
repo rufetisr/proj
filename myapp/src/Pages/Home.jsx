@@ -9,10 +9,7 @@ function Home() {
   // const [data, setData] = useState();
   // const [title, setTitle] = useState();
   const [obj, setObj] = useState([{
-    Poster: "",
-    Title: "",
-    Year: "",
-    imdbID: "",
+  
   }]);
   // const [id, setId] = useState([])
   return (
